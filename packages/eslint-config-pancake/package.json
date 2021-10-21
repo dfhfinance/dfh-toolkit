@@ -1,12 +1,12 @@
 {
-  "name": "@pancakeswap/eslint-config-pancake",
-  "version": "1.2.0",
-  "description": "Eslint config for PancakeSwap",
+  "name": "@dfh-finance/eslint-config-pancake",
+  "version": "0.1.0",
+  "description": "Eslint config for dfh-frontend",
   "main": "lib/index.js",
   "files": [
     "lib"
   ],
-  "repository": "https://github.com/pancakeswap/pancake-toolkit/tree/master/packages/eslint-config-pancake",
+  "repository": "https://github.com/dfhfinance/dfhfinance-toolkit/tree/master/packages/eslint-config-pancake",
   "license": "MIT",
   "author": "RabbitDoge",
   "private": false,
