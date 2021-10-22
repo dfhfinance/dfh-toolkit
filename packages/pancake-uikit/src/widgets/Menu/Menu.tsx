@@ -4,15 +4,14 @@ import styled from "styled-components";
 import BottomNav from "../../components/BottomNav";
 import { Box } from "../../components/Box";
 import Flex from "../../components/Box/Flex";
-import Footer from "../../components/Footer";
+import CakePrice from "../../components/CakePrice/CakePrice";
+import LangSelector from "../../components/LangSelector/LangSelector";
 import MenuItems from "../../components/MenuItems/MenuItems";
 import { SubMenuItems } from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
-import CakePrice from "../../components/CakePrice/CakePrice";
 import Logo from "./components/Logo";
-import { MENU_HEIGHT, MOBILE_MENU_HEIGHT } from "./config";
+import { MENU_HEIGHT } from "./config";
 import { NavProps } from "./types";
-import LangSelector from "../../components/LangSelector/LangSelector";
 
 const Wrapper = styled.div`
   position: relative;
@@ -30,7 +29,6 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   width: 100%;
   height: ${MENU_HEIGHT}px;
   background-color: ${({ theme }) => theme.nav.background};
-  background: yellow;
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   z-index: 20;
   transform: translate3d(0, 0, 0);
@@ -134,17 +132,6 @@ const Menu: React.FC<NavProps> = ({
       <BodyWrapper mt={!subLinks ? `${MENU_HEIGHT + 1}px` : "0"}>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
-          <Footer
-            items={footerLinks}
-            isDark={isDark}
-            toggleTheme={toggleTheme}
-            langs={langs}
-            setLang={setLang}
-            currentLang={currentLang}
-            cakePriceUsd={cakePriceUsd}
-            buyCakeLabel={buyCakeLabel}
-            mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
-          />
         </Inner>
       </BodyWrapper>
       {isMobile && <BottomNav items={links} activeItem={activeItem} activeSubItem={activeSubItem} />}
