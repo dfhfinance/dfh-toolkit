@@ -21,7 +21,7 @@ export const StyledOverlay = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: ${({ theme }) => `${theme.colors.text}99`};
+  background-color: ${({ theme }) => `${theme.colors.overlay}99`};
   backdrop-filter: blur(2px);
 `;
 
