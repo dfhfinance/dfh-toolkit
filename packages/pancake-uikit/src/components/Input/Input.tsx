@@ -37,7 +37,7 @@ const Input = styled.input<InputProps>`
   border: 0;
   border-radius: 16px;
   box-shadow: ${getBoxShadow};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.textBlack};
   display: block;
   font-size: 16px;
   height: ${getHeight};
@@ -47,7 +47,7 @@ const Input = styled.input<InputProps>`
   border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
 
   &::placeholder {
-    color: ${({ theme }) => theme.colors.textSubtle};
+    color: ${({ theme }) => theme.colors.tertiary};
   }
 
   &:disabled {
