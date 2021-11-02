@@ -40,6 +40,11 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
 const BodyWrapper = styled(Box)`
   position: relative;
   display: flex;
+  margin-bottom: 66px;
+
+  ${({ theme }) => theme.mediaQueries.sm} {
+    margin-bottom: unset;
+  }
 `;
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
@@ -128,8 +133,7 @@ const Menu: React.FC<NavProps> = ({
           {globalMenu} {userMenu}
         </Flex>
       </StyledNav>
-      {subLinks && <SubMenuItems items={subLinks} mt={`${MENU_HEIGHT + 1}px`} activeItem={activeSubItem} />}
-      <BodyWrapper mt={!subLinks ? `${MENU_HEIGHT + 1}px` : "0"}>
+      <BodyWrapper mt={`${MENU_HEIGHT}px`}>
         <Inner isPushed={false} showMenu={showMenu}>
           {children}
         </Inner>
