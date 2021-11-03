@@ -7,7 +7,6 @@ import Flex from "../../components/Box/Flex";
 import CakePrice from "../../components/CakePrice/CakePrice";
 import LangSelector from "../../components/LangSelector/LangSelector";
 import MenuItems from "../../components/MenuItems/MenuItems";
-import { SubMenuItems } from "../../components/SubMenuItems";
 import { useMatchBreakpoints } from "../../hooks";
 import Logo from "./components/Logo";
 import { MENU_HEIGHT } from "./config";
@@ -57,18 +56,13 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
 const Menu: React.FC<NavProps> = ({
   userMenu,
   globalMenu,
-  isDark,
-  toggleTheme,
   currentLang,
   setLang,
   cakePriceUsd,
   links,
-  subLinks,
-  footerLinks,
   activeItem,
   activeSubItem,
   langs,
-  buyCakeLabel,
   children,
 }) => {
   const { isMobile } = useMatchBreakpoints();

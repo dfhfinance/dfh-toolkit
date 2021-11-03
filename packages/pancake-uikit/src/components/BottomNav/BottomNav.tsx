@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import BottomNavItem from "../BottomNavItem";
-import StyledBottomNav, { StyledOverlay } from "./styles";
+import StyledBottomNav from "./styles";
 import { Box } from "../Box";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { BottomNavProps } from "./types";

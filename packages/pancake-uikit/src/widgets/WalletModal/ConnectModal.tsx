@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import Grid from "../../components/Box/Grid";
 import Box from "../../components/Box/Box";
-import getThemeValue from "../../util/getThemeValue";
 import Text from "../../components/Text/Text";
 import Heading from "../../components/Heading/Heading";
 import { Button } from "../../components/Button";
@@ -51,7 +50,6 @@ const getPreferredConfig = (walletConfig: Config[]) => {
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayCount = 3, t }) => {
   const [showMore, setShowMore] = useState(false);
-  const theme = useTheme();
   const sortedConfig = getPreferredConfig(config);
   const displayListConfig = showMore ? sortedConfig : sortedConfig.slice(0, displayCount);
 
