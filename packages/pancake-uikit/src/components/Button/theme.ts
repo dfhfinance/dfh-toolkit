@@ -53,6 +53,11 @@ export const styleVariants = {
     color: "primary",
     boxShadow: "none",
   },
+  [variants.TEXT2]: {
+    backgroundColor: "transparent",
+    color: "secondary",
+    boxShadow: "none",
+  },
   [variants.LIGHT]: {
     backgroundColor: "input",
     color: "textSubtle",

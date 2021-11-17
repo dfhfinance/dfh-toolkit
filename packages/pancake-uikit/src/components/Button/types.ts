@@ -13,6 +13,7 @@ export const variants = {
   SECONDARY: "secondary",
   TERTIARY: "tertiary",
   TEXT: "text",
+  TEXT2: "text2",
   DANGER: "danger",
   SUBTLE: "subtle",
   SUCCESS: "success",
