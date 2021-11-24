@@ -18,6 +18,8 @@ const StyledLink = styled(Link)`
   align-items: center;
   .mobile-icon {
     width: 32px;
+    min-width: 32px;
+
     ${({ theme }) => theme.mediaQueries.nav} {
       display: none;
     }
